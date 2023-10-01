@@ -19,7 +19,7 @@ def telegram_bot_sendtext(bot_message):
 
 
 def check():
-    LINK = 'https://www.amazon.it/dp/asin-of-the-product-here'
+    LINK = 'https://www.amazon.in/dp/product-here'
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36',
     }
@@ -32,7 +32,7 @@ def check():
 
     check = str(div_case)
 
-    if "Disponibilità" in check:
+    if "Availability" in check:
         telegram_bot_sendtext("message-to-send")
         print("message-to-print-in-console")
     else:
